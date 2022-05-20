@@ -1,6 +1,6 @@
 from operator import concat
 
-with open('Scenario 1.sum') as f:
+with open('Single 500mcm.sum') as f:
     data = f.readlines()
     
     for line in data:

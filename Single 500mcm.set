@@ -1,0 +1,90 @@
+CFD 2021 Analysis Setup
+Length Units: inch-Watt
+Coordinate System: XY
+
+
+Geometry Operations:
+     ---None---
+ 
+ 
+Materials:
+   2 ***Fluid*** Air
+      Assigned to:
+         3 Part1.Body3_U_Part1.Body2
+         4 Part1.Body3
+      Properties:
+     Reference Pressure: 14.6828 psi
+     Reference Temperature: 30 Celsius
+     Gas Constant: 444928 in2/s2-K
+     Density Equation of State
+     Viscosity Constant 2.63297e-09 lbf-s/in2
+     Conductivity Constant 0.000651002 W/in-K
+     Compressibility Constant 1.4
+     Specific heat Constant 175985 W-in/lbf-s-K
+     Emissivity Constant 1
+     Wall roughness Constant 0 inch
+   3 ***Solid*** 500mcm conductor
+      Assigned to:
+         1 Part1.Body3_U_Part1.Body2
+      Properties:
+     Density Constant 0.000253354 lbf-s2/in4
+     Specific heat Constant 154250 W-in/lbf-s-K
+     Emissivity Constant 0.02
+     Transmissivity Constant 0
+     Wall roughness Constant 0 inch
+     X-Direction Constant 5.08 W/in-K
+     Y-Direction Same as X-dir.
+     Z-Direction Same as X-dir.
+     Electrical resistivity Polynomial
+   4 ***Solid*** XLPE
+      Assigned to:
+         2 Part1.Body3_U_Part1.Body2_U_Part1.Body1
+      Properties:
+     Density Constant 9.81631e-05 lbf-s2/in4
+     Specific heat Constant 381067 W-in/lbf-s-K
+     Emissivity Constant 0.4
+     Transmissivity Constant 0
+     Wall roughness Constant 0 inch
+     X-Direction Constant 0.007112 W/in-K
+     Y-Direction Same as X-dir.
+     Z-Direction Same as X-dir.
+     Electrical resistivity Constant 0 ohm-in
+ 
+ 
+Motions:
+     ---None---
+ 
+ 
+Boundary Conditions:
+   Boundaries:
+      #7 Edge
+         Temperature(30 Celsius)
+      #8 Edge
+         Pressure(0 Pa Gage)
+         Film Coefficient(5 W/m2/K, 30 Celsius)
+      #9 Edge
+         Temperature(30 Celsius)
+      #10 Edge
+         Pressure(0 Pa Gage)
+         Temperature(30 Celsius)
+   Regions:
+      #1 Part1.Body3_U_Part1.Body2
+         Total Heat Generation(1.101 W)
+ 
+ 
+Initial Conditions:
+   Boundaries:
+      ---None---
+   Regions:
+      ---None---
+ 
+ 
+Mesh Sizes:
+ Manual mesh sizing: 
+   Surfaces:
+      #1 [Size=0.1]
+      #2 [Size=0.1]
+      #3 [Size=0.6]
+      #4 [Size=1.2]
+   Edges:
+      ---None---
